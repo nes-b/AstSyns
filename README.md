@@ -39,7 +39,7 @@ To prepare your analysis environment for synapse density assessment of astrocyti
 Now, we are going to extract the synapse densities for each extracted ROI/bin, 
 which in the whole provide a representation of the (flattened) spatial astrocytic domain. 
 
-### Extract ROIS
+### Extract ROIS from raw image
 
 Open the test image (/GuideFiles/#TA_homer1_at8.lsm) by dragging it to the ImageJ desktop panel.
 Then, add the __RoiSet__ file to the ImageJ working space by drag-and-drop.
@@ -47,6 +47,14 @@ Note: check the *labels* and *Numbering* in the ROI-Manager window to visualize 
 
 ![Image of Roi_extraction](https://github.com/nes-b/AstSyns/blob/master/images_readme/roi_extraction.PNG)
 
+As we can see, 17 bins of 27^2 um^2 each represent 5 different distances of concentric circular areas in this image:
+ * center: 1
+ * close: 2,5,8,11
+ * mid: 3,6,9,12
+ * dist: 4,7,10,13
+ * out: 14,15,16,17
+
+### Detect synaptic puncta
 Then navigate to the *Interactive Interpreter - ExtractRois* and press <Ctrl + R> to execute the macro. 
 This will extract all ROIs shown in yellow and stack them in the order 1-17.
 
@@ -55,6 +63,9 @@ Next, you can easily apply the preset preprocessing and *Analyze Particles...* p
 ![Image of puncta detection](https://github.com/nes-b/AstSyns/blob/master/images_readme/exe_analyzeparticlesmacro_.PNG)
 
 A window will pop-up with the values of Count, Total Area, Average Size, %Area and Mean, as highlighted on the lower right. 
+For further analyses, only the *Counts* argument will be used.
+
+After applying this workflow to every extracted ROI, calculating the mean of each distance circle area for every imaged astrocytic domain, we obtain a table of distance circle-specific as well as cohort-specific synaptic density measurements. 
 
 
 
