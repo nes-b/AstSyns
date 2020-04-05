@@ -1,2 +1,21 @@
 This folder contains the scripts for the bipartite synapse analysis.
 
+FOR THE SCRIPT ExcitPreprocess
+
+
+FOR THE SCRIPT  SynCountExcit
+
+# Subsequently, the SynapseCounter tool (https://github.com/SynPuCo/SynapseCounter. Accessed 6 Mar 2020)
+# was run with the following params:
+#
+# Resize image width = 0
+# Rolling ball radius = 0.0
+# Maximum filter radius = 2.0
+# Method for threshold adjustment = 'Default'
+# Presynaptic particle size = 30
+# Max presynaptic particle size = 700
+# Presynaptic particle size = 10
+# Presynaptic particle size = 500
+#
+# after a posteriori determination of real puncta in 3 images.
+#
