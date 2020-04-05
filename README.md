@@ -19,13 +19,45 @@ installed before continuing.
 Please refer to these site for installation instructions.
 All macro scripts were written in *.ijm*
 
+## Bipartite Synapse - Density Measurement
+
+### Prepare workspace
+
+To prepare your analysis environment for synapse density assessment of randomly sampled images across the frontal cortex or striatal anterior caudate nucleus or putamen, please follow this guide:
+
+* Download the folder __GuideFilesBipartite__
+* Open ImageJ/FIJI on desktop.
+* Press <Ctrl + J> to open the *Interactive Interpreter* or use the navigation panes.
+  * Paste the code from __ExcitPreprocess__
+* Open another *Interactive Interpreter* window 
+  * Paste the code from __SynCountExcit__ 
+
+### Synapse Counter 
+Assuming a functional bipartite synapse needs a spatial proximity of both pre- and postsynapses, the *SynapseCounter* tests every two neighbouring puncta for its colocalization (2D overlap) of >= 0.33 (default). 
+We define synapses fulfilling this requirement as a (excitatory or inhibitory) bipartite unit. 
+
+Markers to distinguish the type / quality of a synpase used in this approach were:
+
+type | presynaptic | postsynaptic
+------------ | ------------- | -------------
+__excitatory__ | vGLUT1 | HOMER1
+__inhibitory__ |vGAT | GEPHYRIN
+
+To get the synapse numbers in from an exemplary sample of a human control subject please open the file __#ctrl_homer1_vglut1.lsm__  by dragging it to the ImageJ desktop-pane.
+Initiatlize the *SynapseCounter*-Tool and select select the following paramters for excitatory synapses:
+
+
+
+
+
+## Astrocyte Domain - Synapse Density
 
 ### Prepare workspace
 
 To prepare your analysis environment for synapse density assessment of astrocytic domains, please follow this guide:
 
-* Download the folder __GuideFiles__
-* Open ImageJ/FIJI as desktop-app.
+* Download the folder __GuideFilesAstDom__
+* Open ImageJ/FIJI as desktop.
 * Press <Ctrl + J> to open the *Interactive Interpreter* or use the navigation panes.
   * Paste the code from __ExtractRois__
 * Open another *Interactive Interpreter* window 
