@@ -1,0 +1,28 @@
+
+Stack.setChannel(1);
+run("Grays");
+run("Subtract Background...", "rolling=10 slice");
+run("Bandpass Filter...", "filter_large=200 filter_small=4 suppress=None tolerance=1 autoscale saturate display");
+close();
+run("Despeckle", "slice");
+run("Sharpen", "slice");
+run("Subtract Background...", "rolling=10 slice");
+
+Stack.setChannel(2);
+run("Subtract Background...", "rolling=10 slice");
+run("Bandpass Filter...", "filter_large=200 filter_small=4 suppress=None tolerance=1 autoscale saturate display");
+close();
+run("Despeckle", "slice");
+run("Sharpen", "slice");
+run("Subtract Background...", "rolling=10 slice");
+
+run("8-bit");
+Stack.setChannel(1);
+setAutoThreshold("Yen dark");
+//run("Threshold...");
+run("Convert to Mask", "method=Yen background=Dark only black");
+
+Stack.setChannel(2);
+setAutoThreshold("Yen dark");
+//setThreshold("Intermodes dark");
+run("Convert to Mask", "method=Yen background=Dark only black");
