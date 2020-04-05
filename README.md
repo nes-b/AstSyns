@@ -1,6 +1,6 @@
-# Contribution of the Astrocytic Tau Pathology to Synapse Loss in PSP & CBD 
+# Measuring Bipartite Synapse Density and the Synaptic Island  
 
-Analysis of synaptic puncta in primary human brain tissue
+Analysis of synaptic puncta in primary human brain tissue.
 
 ## Getting Started
 
