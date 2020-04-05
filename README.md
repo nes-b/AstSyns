@@ -29,7 +29,7 @@ To prepare your analysis environment for synapse density assessment of astrocyti
 * Download the folder __GuideFiles__
 * Open ImageJ/FIJI as desktop-app.
 * Press <Ctrl + Alt + J> to open the *Interactive Interpreter* or use the navigation panes.
-  * Paste here the code from __extractRois__
+  * Paste here the code from __ExtractRois__
  * Open another *Interactive Interpreter* window 
   * Paste the code from __AstDomainDistr__ 
 
@@ -42,20 +42,20 @@ which in the whole provide a representation of the (flattened) spatial astrocyti
 ### Extract ROIS
 
 Open the test image (/GuideFiles/#TA_homer1_at8.lsm) by dragging it to the ImageJ desktop panel.
-Then, add
+Then, add the __RoiSet__ file to the ImageJ working space by drag-and-drop.
+Note: check the *labels* and *Numbering* in the ROI-Manager window to visualize the preset ROIs. 
 
+![Image of Roi_extraction](https://github.com/nes-b/AstSyns/blob/master/images_readme/roi_extraction.PNG)
 
-```
-Give an example
-```
+Then navigate to the *Interactive Interpreter - ExtractRois* and press <Ctrl + R> to execute the macro. 
+This will extract all ROIs shown in yellow and stack them in the order 1-17.
 
-### And coding style tests
+Next, you can easily apply the preset preprocessing and *Analyze Particles...* pipeline by left-clicking on one of the extracted bins/ROIs and run *Interactive Interpreter - AstDomainDistr*.
 
-Explain what these tests test and why
+![Image of puncta detection](https://github.com/nes-b/AstSyns/blob/master/images_readme/exe_analyzeparticlesmacro_.PNG
 
-```
-Give an example
-```
+A window will pop-up with the values of Count, Total Area, Average Size, %Area and Mean, as highlighted on the lower right. 
+
 
 ## Deployment
 
@@ -69,17 +69,13 @@ Add additional notes about how to deploy this on a live system
 
 ## Contributing
 
-Please read [CONTRIBUTING.md](https://gist.github.com/PurpleBooth/b24679402957c63ec426) for details on our code of conduct, and the process for submitting pull requests to us.
 
-## Versioning
-
-We use [SemVer](http://semver.org/) for versioning. For the versions available, see the [tags on this repository](https://github.com/your/project/tags). 
 
 ## Authors
 
-* **Billie Thompson** - *Initial work* - [PurpleBooth](https://github.com/PurpleBooth)
+* **Nils Briel** - *Initial work* - [nes-b](https://github.com/nes-b)
 
-See also the list of [contributors](https://github.com/your/project/contributors) who participated in this project.
+See also the list of [contributors](https://github.com/contributors) who participated in this project.
 
 ## License
 
