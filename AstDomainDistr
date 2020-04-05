@@ -1,0 +1,18 @@
+# On every Roi an automated puncta detection algortihm was run, which 
+# subtracted background, applied bandpass and threshold filter before counting puncta of the binarized image.
+
+Stack.setChannel(1);
+run("Grays");
+run("Subtract Background...", "rolling=8 stack");
+run("Bandpass Filter...", "filter_large=200 filter_small=1 suppress=None tolerance=1 autoscale saturate display");
+close();
+run("Despeckle", "stack");
+run("Sharpen", "stack");
+run("Subtract Background...", "rolling=8 stack");
+
+setAutoThreshold("Yen dark");
+//run("Threshold...");
+setOption("BlackBackground", true);
+run("Convert to Mask", "method=Yen background=Dark calculate black");
+run("Watershed", "slice");
+run("Analyze Particles...", "size=10-500 pixel show=[Bare Outlines] display summarize slice");
