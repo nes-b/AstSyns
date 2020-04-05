@@ -52,14 +52,12 @@ This will extract all ROIs shown in yellow and stack them in the order 1-17.
 
 Next, you can easily apply the preset preprocessing and *Analyze Particles...* pipeline by left-clicking on one of the extracted bins/ROIs and run *Interactive Interpreter - AstDomainDistr*.
 
-![Image of puncta detection](https://github.com/nes-b/AstSyns/blob/master/images_readme/exe_analyzeparticlesmacro_.PNG
+![Image of puncta detection](https://github.com/nes-b/AstSyns/blob/master/images_readme/exe_analyzeparticlesmacro_.PNG)
 
 A window will pop-up with the values of Count, Total Area, Average Size, %Area and Mean, as highlighted on the lower right. 
 
 
-## Deployment
 
-Add additional notes about how to deploy this on a live system
 
 ## Built With
 
@@ -69,11 +67,17 @@ Add additional notes about how to deploy this on a live system
 
 ## Contributing
 
+See also the preprint/manuscript on (server/journal)
 
+Katrin Pratsch, Dr. Sigrun Roeber, Dr. Thomas Arzberger, Prof. Dr. med. Jochen Herms
+
+Center for Neuropathology /
+German Center for Neurodegenerative Diseases, Translational Research /
+University Hospital Munich
 
 ## Authors
 
-* **Nils Briel** - *Initial work* - [nes-b](https://github.com/nes-b)
+* **Nils Briel** - [nes-b](https://github.com/nes-b)
 
 See also the list of [contributors](https://github.com/contributors) who participated in this project.
 
@@ -83,6 +87,4 @@ This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md
 
 ## Acknowledgments
 
-* Hat tip to anyone whose code was used
-* Inspiration
-* etc
+* Thanks to Tanja Blume, José Medina Luque, Dr. Carmelo Sgobio and Dr. Dr. Mario Dorostkar for valuable conceptional and technical input.
