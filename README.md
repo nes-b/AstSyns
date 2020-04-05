@@ -4,7 +4,7 @@ Analysis of synaptic puncta in primary human brain tissue
 
 ## Getting Started
 
-These instructions will let you reproduce the workflow of bipartite synapse analysis and astrocytic domain analysis described in our human brain tissue study (doi: preprint). See deployment for notes on how to deploy the project on a live system.
+These instructions will let you reproduce the workflow of bipartite synapse analysis and astrocytic domain analysis described in our human brain tissue study (doi: preprint). See below for notes on how to deploy the scripts on your system.
 
 ### Prerequisites
 
@@ -17,10 +17,8 @@ You should have your OS-specific version of the open-source scientific image ana
 
 installed before continuing.
 Please refer to these site for installation instructions.
+All macro scripts were written in *.ijm*
 
-```
-Give examples
-```
 
 ### Prepare workspace
 
@@ -49,10 +47,10 @@ Note: check the *labels* and *Numbering* in the ROI-Manager window to visualize 
 
 As we can see, 17 bins of 27^2 um^2 each represent 5 different distances of concentric circular areas in this image:
  * center: 1
- * close: 2,5,8,11
- * mid: 3,6,9,12
- * dist: 4,7,10,13
- * out: 14,15,16,17
+ * close:  2,5,8,11
+ * mid:    3,6,9,12
+ * dist:   4,7,10,13
+ * out:    14,15,16,17
 
 ### Detect synaptic puncta
 Then navigate to the *Interactive Interpreter - ExtractRois* and press <Ctrl + R> to execute the macro. 
@@ -68,12 +66,6 @@ For further analyses, only the *Counts* argument will be used.
 After applying this workflow to every extracted ROI, calculating the mean of each distance circle area for every imaged astrocytic domain, we obtain the values of distance circle-specific as well as cohort-specific synaptic density measurements. 
 
 
-
-## Built With
-
-* [Dropwizard](http://www.dropwizard.io/1.0.2/docs/) - The web framework used
-* [Maven](https://maven.apache.org/) - Dependency Management
-* [ROME](https://rometools.github.io/rome/) - Used to generate RSS Feeds
 
 ## Contributing
 
@@ -93,7 +85,7 @@ See also the list of [contributors](https://github.com/contributors) who partici
 
 ## License
 
-This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md) file for details
+This project is licensed under the Apache License (version 2.0) - see the [LICENSE.md](LICENSE.md) file for details
 
 ## Acknowledgments
 
