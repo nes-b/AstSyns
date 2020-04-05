@@ -65,8 +65,7 @@ Next, you can easily apply the preset preprocessing and *Analyze Particles...* p
 A window will pop-up with the values of Count, Total Area, Average Size, %Area and Mean, as highlighted on the lower right. 
 For further analyses, only the *Counts* argument will be used.
 
-After applying this workflow to every extracted ROI, calculating the mean of each distance circle area for every imaged astrocytic domain, we obtain a table of distance circle-specific as well as cohort-specific synaptic density measurements. 
-
+After applying this workflow to every extracted ROI, calculating the mean of each distance circle area for every imaged astrocytic domain, we obtain the values of distance circle-specific as well as cohort-specific synaptic density measurements. 
 
 
 
@@ -82,8 +81,8 @@ See also the preprint/manuscript on (server/journal)
 
 Katrin Pratsch, Dr. Sigrun Roeber, Dr. Thomas Arzberger, Prof. Dr. med. Jochen Herms
 
-Center for Neuropathology /
-German Center for Neurodegenerative Diseases, Translational Research /
+Center for Neuropathology
+German Center for Neurodegenerative Diseases, Translational Research
 University Hospital Munich
 
 ## Authors
