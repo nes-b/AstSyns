@@ -41,7 +41,7 @@ which in the whole provide a representation of the (flattened) spatial astrocyti
 
 Open the test image (/GuideFiles/#TA_homer1_at8.lsm) by dragging it to the ImageJ desktop panel.
 Then, add the __RoiSet__ file to the ImageJ working space by drag-and-drop.
-Note: check the *labels* and *Numbering* in the ROI-Manager window to visualize the preset ROIs. 
+Note: check the *Labels* and *Show All* in the ROI-Manager window to visualize the preset ROIs. 
 
 ![Image of Roi_extraction](https://github.com/nes-b/AstSyns/blob/master/images_readme/roi_extraction.PNG)
 
@@ -85,7 +85,7 @@ See also the list of [contributors](https://github.com/contributors) who partici
 
 ## License
 
-This project is licensed under the Apache License (version 2.0) - see the [LICENSE.md](LICENSE.md) file for details
+This project is licensed under the Apache License (version 2.0) - see the [LICENSE](LICENSE) file for details
 
 ## Acknowledgments
 
