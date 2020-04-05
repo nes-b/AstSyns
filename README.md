@@ -27,8 +27,8 @@ To prepare your analysis environment for synapse density assessment of astrocyti
 * Download the folder __GuideFiles__
 * Open ImageJ/FIJI as desktop-app.
 * Press <Ctrl + Alt + J> to open the *Interactive Interpreter* or use the navigation panes.
-  * Paste here the code from __ExtractRois__
- * Open another *Interactive Interpreter* window 
+  * Paste the code from __ExtractRois__
+* Open another *Interactive Interpreter* window 
   * Paste the code from __AstDomainDistr__ 
 
 
