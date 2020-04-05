@@ -1,9 +1,15 @@
 This folder contains the scripts for the bipartite synapse analysis.
 
+
 FOR THE SCRIPT ExcitPreprocess
 
+# This is an ImageJ script allowing to preprocess 2D imaging data
+#
+# It has been used to prepare 2D confocal images to quantify excitatory 
+# synaptic puncta labeled by vGLUT1 and HOMER1 in primary human brain tissue
 
-FOR THE SCRIPT  SynCountExcit
+
+FOR THE SCRIPT  ExcitSynCount
 
 # Subsequently, the SynapseCounter tool (https://github.com/SynPuCo/SynapseCounter. Accessed 6 Mar 2020)
 # was run with the following params:
@@ -19,3 +25,30 @@ FOR THE SCRIPT  SynCountExcit
 #
 # after a posteriori determination of real puncta in 3 images.
 #
+
+
+____________________________________________
+
+FOR THE SCRIPT InhibtPreprocess
+
+# This is an ImageJ script allowing preprocessing of 2D imaging data
+#
+# It has been used to prepare 2D confocal images to quantify inhibitory 
+# synapses labeled by vGAT1 and GEPHYRIN in primary human brain tissue.
+
+
+FOR THE SCRIPT  InhibSynCount
+
+# Subsequently, the SynapseCounter tool (https://github.com/SynPuCo/SynapseCounter. Accessed 6 Mar 2020)
+# was run with the following params:
+#
+# Resize image width = 0
+# Rolling ball radius = 0.0
+# Maximum filter radius = 2.0
+# Method for threshold adjustment = 'Default'
+# Presynaptic particle size = 30
+# Max presynaptic particle size = 500
+# Presynaptic particle size = 30
+# Presynaptic particle size = 500
+#
+# after a posteriori determination of real puncta in 3 images.
