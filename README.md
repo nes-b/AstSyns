@@ -17,6 +17,7 @@ and its tool
 installed before continuing.
 Please refer to these site for installation instructions.
 All macro scripts were written in *.ijm*
+Note: file names are written in *underscore_case*, whereas script names are written in *camelCase*.
 
 ## Bipartite Synapse - Density Measurement
 
@@ -24,12 +25,10 @@ All macro scripts were written in *.ijm*
 
 To prepare your analysis environment for synapse density assessment of randomly sampled images across the frontal cortex or striatal anterior caudate nucleus or putamen, please follow this guide:
 
-* Download the folder __GuideFilesBipartite__
+* Download the folder __guide_files__ and navigate to the folder using your file explorer.
 * Open ImageJ/FIJI on desktop.
 * Press <Ctrl + J> to open the *Interactive Interpreter* or use the navigation panes.
-  * Paste the code from __ExcitPreprocess__
-* Open another *Interactive Interpreter* window 
-  * Paste the code from __SynCountExcit__ 
+  * Paste the code from __ExcitPreprocess__ 
 
 ### Synapse Counter 
 Assuming a functional bipartite synapse needs a spatial proximity of both pre- and postsynapses, the *SynapseCounter* tests every two neighbouring puncta for its colocalization (2D overlap) of >= 0.33 (default). 
@@ -43,10 +42,21 @@ __excitatory__ | vGLUT1 | HOMER1
 __inhibitory__ |vGAT | GEPHYRIN
 
 To get the synapse numbers in from an exemplary sample of a human control subject please open the file __#ctrl_homer1_vglut1.lsm__  by dragging it to the ImageJ desktop-pane.
+
+Preprocess the image using the __ExcitPreprocess__ script by pressing <Ctrl + R> in the interpreter window.
+
+![Image of excit preprocessing](https://github.com/nes-b/AstSyns/blob/master/images_readme/syncount_excit_wf.PNG)
+
 Initiatlize the *SynapseCounter*-Tool and select select the following paramters for excitatory synapses:
 
+![Image of synapse counter settings](https://github.com/nes-b/AstSyns/blob/master/images_readme/syncount_excit_paramsPNG.PNG)
 
+Thereby, from your 2-channel image you retrieve the values of single counts (pre- /postsynaptic) and colocalzation.
+To calculate the density, we divide this absolute numbers by the extent of our ROI (50.61^2) um^2,
 
+so that, e.g. 
+
+633 synapses / 2561.3721 um^2‬ = 0.247 synapses/um^2
 
 
 ## Astrocyte Domain - Synapse Density
@@ -55,7 +65,7 @@ Initiatlize the *SynapseCounter*-Tool and select select the following paramters 
 
 To prepare your analysis environment for synapse density assessment of astrocytic domains, please follow this guide:
 
-* Download the folder __GuideFilesAstDom__
+* Download the folder __guide_files__ or navigate into the already downlowded folder using your file explorer.
 * Open ImageJ/FIJI as desktop.
 * Press <Ctrl + J> to open the *Interactive Interpreter* or use the navigation panes.
   * Paste the code from __ExtractRois__
@@ -74,7 +84,7 @@ Open the test image (/GuideFiles/#TA_homer1_at8.lsm) by dragging it to the Image
 Then, add the __RoiSet__ file to the ImageJ working space by drag-and-drop.
 Note: check the *Labels* and *Show All* in the ROI-Manager window to visualize the preset ROIs. 
 
-![Image of Roi_extraction](https://github.com/nes-b/AstSyns/blob/master/images_readme/roi_extraction.PNG)
+![Image of Roi_extraction](https://github.com/nes-b/AstSyns/blob/master/images_readme/roi_extraction_ap.PNG)
 
 As we can see, 17 bins of 27^2 um^2 each represent 5 different distances of concentric circular areas in this image:
  * center: 1
@@ -89,7 +99,7 @@ This will extract all ROIs shown in yellow and stack them in the order 1-17.
 
 Next, you can easily apply the preset preprocessing and *Analyze Particles...* pipeline by left-clicking on one of the extracted bins/ROIs and run *Interactive Interpreter - AstDomainDistr*.
 
-![Image of puncta detection](https://github.com/nes-b/AstSyns/blob/master/images_readme/exe_analyzeparticlesmacro_.PNG)
+![Image of puncta detection](https://github.com/nes-b/AstSyns/blob/master/images_readme/exe_analyzeparticlesmacro_ap.PNG)
 
 A window will pop-up with the values of Count, Total Area, Average Size, %Area and Mean, as highlighted on the lower right. 
 For further analyses, only the *Counts* argument will be used.
@@ -114,6 +124,13 @@ University Hospital Munich
 
 See also the list of [contributors](https://github.com/contributors) who participated in this project.
 
+## Citation
+
+If you use this workflow please cite:
+- https://github.com/nes-b/AstSyns/
+or 
+- preprint doi / journal
+
 ## License
 
 This project is licensed under the Apache License (version 2.0) - see the [LICENSE](LICENSE) file for details
@@ -121,3 +138,4 @@ This project is licensed under the Apache License (version 2.0) - see the [LICEN
 ## Acknowledgments
 
 * Thanks to Tanja Blume, José Medina Luque, Dr. Carmelo Sgobio and Dr. Dr. Mario Dorostkar for valuable conceptional and technical input.
+* Thanks also to the developers of the *Synapse Counter* Egor Dzyubenko and Andrey Rozenberg for making available such a helpful and easy to access tool.
