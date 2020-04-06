@@ -55,8 +55,8 @@ The background subtracted, thresholded and binarized result should then look lik
 ![Image excit preprocessing](https://github.com/nes-b/AstSyns/blob/master/images_readme/syncount_excit_wf.PNG) \
 Figure 1. Preprocessing for bipartite synapse analysis.
 
-Given a previously defined range of sizes that particles should lie within, we now turn to (let) count all puncta and their spatial overlap. \ 
-According to the developer's advise the size cut-offs to set were chosen by collating different values with the expected immunofluorescent signal by eye. \ 
+Given a previously defined range of sizes that particles should lie within, we now turn to (let) count all puncta and their spatial overlap. \
+According to the developer's advise the size cut-offs to set were chosen by collating different values with the expected immunofluorescent signal by eye. \
 Please see the [developers page](https://github.com/SynPuCo/SynapseCounter) for detailed instructions. \
 Initiatlize the *SynapseCounter*-Tool and select select the following paramters for excitatory synapses:
 
