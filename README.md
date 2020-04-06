@@ -8,11 +8,10 @@ These instructions will let you reproduce the workflow of bipartite synapse anal
 
 ### Prerequisites
 
-What things you need to install the software and how to install them
-
-You should have your OS-specific version of the open-source scientific image analysis software and tools:
+You should have your OS-specific version of the open-source scientific image analysis software:
 
 - ImageJ/Fiji (https://imagej.net/Fiji/Downloads)
+and its tool
 - 'SynapseCounter' (https://github.com/SynPuCo/SynapseCounter)
 
 installed before continuing.
