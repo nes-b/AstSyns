@@ -4,7 +4,7 @@ Analysis of synaptic puncta in primary human brain tissue.
 
 ## Getting Started
 
-These instructions guide you through the workflow of bipartite synapse analysis and astrocytic domain analysis based described in our human brain tissue study (doi: preprint). \
+These instructions guide you through the workflow of bipartite synapse analysis and astrocytic domain analysis described in our human brain tissue study (doi: preprint). \
 See below for notes on how to deploy the scripts on your system.
 
 ### Prerequisites
