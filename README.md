@@ -18,7 +18,7 @@ and the Fiji tool
 installed before continuing.
 
 Please refer to these sites for installation instructions. \
-All macro scripts were written in *.ijm* 
+All macro scripts were written in *.ijm*. 
 Note: __file__ names are written in *underscore_case*, whereas __script__ names are written in *camelCase*.
 
 ## Bipartite Synapse - Density Measurement
@@ -37,8 +37,7 @@ To prepare your analysis environment for bipartite synapse density assessment, p
   * Paste the code from __ExcitPreprocess__ 
 
 ### Synapse Counter 
-Assuming any functional bipartite synapse needs spatial proximity of both: pre- and postsynapses, \
-Therefore, the *SynapseCounter* tests every two neighbouring puncta for its colocalization (2-dimensional overlap) of >= 0.33 (default). \
+Assuming any functional bipartite synapse needs spatial proximity of both: pre- and postsynapses, the *SynapseCounter* tests every two neighbouring puncta for its colocalization (2-dimensional overlap) of >= 0.33 (default). \
 Thus, we define synapses fulfilling this requirement as a (excitatory or inhibitory) bipartite unit. 
 
 Markers to distinguish the type/quality of a synapse used in this approach were:
