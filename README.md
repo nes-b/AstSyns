@@ -4,12 +4,12 @@ Analysis of synaptic puncta in primary human brain tissue.
 
 ## Getting Started
 
-These instructions guides you through the workflow of bipartite synapse analysis and astrocytic domain analysis described in our human brain tissue study (doi: preprint). \
+These instructions guide you through the workflow of bipartite synapse analysis and astrocytic domain analysis based described in our human brain tissue study (doi: preprint). \
 See below for notes on how to deploy the scripts on your system.
 
 ### Prerequisites
 
-You should have your OS-specific version of the open-source scientific image analysis software:
+You should have your OS-specific version of the open-source image analysis software:
 
 - ImageJ/Fiji (https://imagej.net/Fiji/Downloads)
 and the Fiji tool
@@ -17,17 +17,19 @@ and the Fiji tool
 
 installed before continuing.
 
-Please refer to these site for installation instructions. \
-All macro scripts were written in *.ijm*  \
+Please refer to these sites for installation instructions. \
+All macro scripts were written in *.ijm* 
 Note: __file__ names are written in *underscore_case*, whereas __script__ names are written in *camelCase*.
 
 ## Bipartite Synapse - Density Measurement
-In our study, we compare the synaptic puncta density of human brains with a certain X-typical pathology. \
-To morphometrically assess the synaptic phenotype in immunofluorescently labeled tissue sections we deploy the *SynapseCounter* as follows.
+In our study, we compare the synaptic puncta density of human brains with a certain X-typical pathology.
+In 50 um-thick human brain sections synaptic markers were labelled in a free-floating immunofluorescence approach. 
+From these sections, we sampled several images across the frontal cortex (LII-IV) or striatal (only gray matter) specimen. 
+To morphometrically assess the synaptic phenotype in these samples sections we deploy the *SynapseCounter* as follows.
 
 ### Prepare workspace
 
-To prepare your analysis environment for synapse density assessment of randomly sampled images across the frontal cortex or striatal anterior caudate nucleus or putamen, please follow this guide:
+To prepare your analysis environment for bipartite synapse density assessment, please follow this guide:
 
 * Download the folder __guide_files__ and navigate to the folder using your file explorer.
 * Open ImageJ/FIJI on the desktop
@@ -35,43 +37,44 @@ To prepare your analysis environment for synapse density assessment of randomly 
   * Paste the code from __ExcitPreprocess__ 
 
 ### Synapse Counter 
-Assuming a functional bipartite synapse needs a spatial proximity of both pre- and postsynapses, \
-the *SynapseCounter* tests every two neighbouring puncta for its colocalization (2-dimensional overlap) of >= 0.33 (default). \
-We define synapses fulfilling this requirement as a (excitatory or inhibitory) bipartite unit. 
+Assuming any functional bipartite synapse needs spatial proximity of both: pre- and postsynapses, \
+Therefore, the *SynapseCounter* tests every two neighbouring puncta for its colocalization (2-dimensional overlap) of >= 0.33 (default). \
+Thus, we define synapses fulfilling this requirement as a (excitatory or inhibitory) bipartite unit. 
 
-Markers to distinguish the type/quality of a synpase used in this approach were:
+Markers to distinguish the type/quality of a synapse used in this approach were:
 
 type | presynaptic | postsynaptic
 ------------ | ------------- | -------------
 __excitatory__ | vGLUT1 | HOMER1
 __inhibitory__ |vGAT | GEPHYRIN
 
-### Example: non-diseased control frontal cortex
-To get the synapse numbers from an exemplary sample of a human control subject please open the file __/guide_files/#ctrl_homer1_vglut1.lsm__  by dragging it to the ImageJ desktop-pane.
+### Example: non-diseased control - frontal cortex
+To obtain the synapse numbers from an exemplary sample of a human control subject please open the file __/guide_files/#ctrl_homer1_vglut1.lsm__  by dragging it to the ImageJ desktop-pane.
 
-Preprocess the image using the __ExcitPreprocess__ script by pressing <Ctrl + R> in the interpreter window. \
+Preprocess the image using the __ExcitPreprocess__ script by pressing <Ctrl + R> in the interpreter window. 
 The background subtracted, thresholded and binarized result should then look like this:
 
 ![Image excit preprocessing](https://github.com/nes-b/AstSyns/blob/master/images_readme/syncount_excit_wf.PNG) \
 Figure 1. Preprocessing for bipartite synapse analysis.
 
-Given a previously defined range of sizes that particles should lie within, we now turn to (let) count all puncta and their spatial overlap. \
+Given a previously defined range of sizes that particles should lie within, we now turn to (let) count all puncta and their spatial overlap. 
 According to the developer's advise the size cut-offs to set were chosen by collating different values with the expected immunofluorescent signal by eye. \
 Please see the [developers page](https://github.com/SynPuCo/SynapseCounter) for detailed instructions. \
+
 Initiatlize the *SynapseCounter*-Tool and select select the following paramters for excitatory synapses:
 
 ![Image synapse counter settings](https://github.com/nes-b/AstSyns/blob/master/images_readme/syncount_excit_paramsPNG.PNG) \
 Figure 2. Parameter settings for the *SynapseCounter*
 
-Thereby, from your 2-channel image, you retrieve the values of single counts (pre- and postsynaptic) as well as those of the colocalzation. \
-To calculate the density, we divide this absolute numbers by the extent of our ROI (50.61 x 50.61) um^2,
+Thereby, from the 2-channel image, you retrieve the values of single counts (pre- and postsynaptic) as well as those of the colocalzation.
+To calculate the density, we divide this absolute numbers by the extent of the ROI (50.61 x 50.61) um^2,
 so that, e.g. 
 
 633 synapses / 2561.3721 um^2‬ = 0.247 synapses/um^2
 
 
 ## Astrocyte Domain - Synapse Density
-We also investigated presumed depletion of the synaptic island (synapses within the astrocytic spatial domain) of affected cells. \
+We also investigated presumed depletion of the synaptic island (synapses within the astrocytic spatial domain) of affected cells. 
 Therefore, we imaged (212 x 212) um^2 large ROI centering such astrocytes (AT8 / EAAT2 markers) and partitioned the raw synaptic channel (HOMER1) into 17 bins. 
 
 ### Prepare workspace
@@ -93,8 +96,8 @@ which in the whole provide a representation of the (flattened) spatial astrocyti
 
 ### Extract ROIS from raw image
 
-Open the test image (__/guide_files/#ap_homer1_at8.zip__) by dragging it to the ImageJ desktop panel. \
-Then, add the __RoiSet.zip__ file to the ImageJ working space by drag-and-drop. \
+Open the test image (__/guide_files/#ap_homer1_at8.zip__) by dragging it to the ImageJ desktop panel.
+Then, add the __RoiSet.zip__ file to the ImageJ working space by drag-and-drop.
 You should see the *.tif* image and the *ROI Manager* as depicted below. \
 Note: check the *Labels* and *Show All* in the ROI-Manager window to visualize the preset ROIs. 
 
@@ -102,13 +105,14 @@ Note: check the *Labels* and *Show All* in the ROI-Manager window to visualize t
 Figure 3. Bin placing and extraction.
 
 As we can see, 17 bins of (27 x 27) um^2 each represent 5 different distances of concentric circular areas in this image:
+
  * center: 1
  * close:  2,5,8,11
  * mid:    3,6,9,12
  * dist:   4,7,10,13
  * out:    14,15,16,17
 
-Then navigate to the *Interactive Interpreter - ExtractRois* and press <Ctrl + R> to execute the macro. \
+Then navigate to the *Interactive Interpreter - ExtractRois* and press <Ctrl + R> to execute the macro. 
 This will extract all ROIs shown in yellow and stack them in the order 1-17 (one such shown in lower mid in fig. 3).
 
 ### Detect synaptic puncta
@@ -121,7 +125,7 @@ A *Summary* window will pop-up with the values of **Count, Total Area, Average S
 For further analyses, only the *Counts* argument will be used. \
 The density is calculated as described in the main section above. 
 
-After applying this workflow to every extracted ROI, calculating the mean of each distance circle area for every imaged \
+After applying this workflow to every extracted ROI, subsequently calculating the mean of each distance circle area for every imaged
 astrocytic domain, we obtain the values of distance circle-specific as well as cohort-specific synaptic density measurements. 
 
 
@@ -131,8 +135,8 @@ See also the preprint/manuscript on (server/journal)
 
 Katrin Pratsch, Dr. Sigrun Roeber, Dr. Thomas Arzberger, Prof. Dr. med. Jochen Herms
 
-Center for Neuropathology
-German Center for Neurodegenerative Diseases, Translational Research
+Center for Neuropathology \
+German Center for Neurodegenerative Diseases, Translational Research \
 University Hospital Munich
 
 ## Authors
@@ -150,7 +154,7 @@ or
 
 ## Ethics statement
 
-The available image resources stem from deceased individuals, who all confirmed the use of their brain tissue for neuroscientific research. \
+The available image resources stem from deceased individuals, who all confirmed the use of their brain tissue for neuroscientific research.
 All data is anonymised, in that noone - except for the contributors themselves - has access to the actual pseudonyme identifiers. \
 This is in agreement with the Ethic Board of the University of Munich.
 
