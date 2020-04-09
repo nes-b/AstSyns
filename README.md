@@ -142,7 +142,7 @@ University Hospital Munich
 
 * **Nils Briel** - [nes-b](https://github.com/nes-b)
 
-See also the list of [contributors](https://github.com/contributors) who participated in this project.
+See also the list of [contributors](https://github.com/nes-b/AstSyns/blob/master/images_readme/contributors) who participated in this project.
 
 ## Citation
 
