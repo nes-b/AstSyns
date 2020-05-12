@@ -4,16 +4,19 @@ Analysis of synaptic puncta in primary human brain tissue.
 
 ## Getting Started
 
-These instructions guide you through the workflow of bipartite synapse analysis and astrocytic domain analysis described in our human brain tissue study (doi: preprint). \
+These instructions guide you through the workflow of bipartite synapse analysis and astrocytic domain analysis described in our human brain tissue study: 
+
+**Contribution of the Astrocytic Tau Pathology to Synapse Loss in Progressive Supranuclear Palsy and Corticobasal Degeneration**. 
+
 See below for notes on how to deploy the scripts on your system.
 
 ### Prerequisites
 
 You should have your OS-specific version of the open-source image analysis software:
 
-- ImageJ/Fiji (https://imagej.net/Fiji/Downloads)
-and the Fiji tool
-- 'SynapseCounter' (https://github.com/SynPuCo/SynapseCounter)
+- ImageJ/Fiji (https://imagej.net/Fiji/Downloads) \
+and the Fiji tool 
+- '*SynapseCounter*' (https://github.com/SynPuCo/SynapseCounter)
 
 installed before continuing.
 
@@ -22,14 +25,15 @@ All macro scripts were written in *.ijm*.
 Note: __file__ names are written in *underscore_case*, whereas __script__ names are written in *camelCase*.
 
 ## Bipartite Synapse - Density Measurement
-In our study, we compare the synaptic puncta density of human brains with a certain X-typical pathology.
-In 50 um-thick human brain sections synaptic markers were labelled in a free-floating immunofluorescence approach. 
+In our study, we compare the synaptic puncta density of human brains with a PSP- and CBD-typical pTau neuropathology with those of neurologially non-diseased controls. \
+(PSP - Progressive Supranuclear Palsy, CBD - Corticobasal Degeneration) \
+In 50 um-thick human brain sections synaptic markers were labelled by a free-floating immunofluorescence approach. 
 From these sections, we sampled several images across the frontal cortex (LII-IV) or striatal (only gray matter) specimen. 
-To morphometrically assess the synaptic phenotype in these samples sections we deploy the *SynapseCounter* as follows.
+To morphometrically assess the synaptic phenotype in these sample sections we deploy the *SynapseCounter* as follows.
 
 ### Prepare workspace
 
-To prepare your analysis environment for bipartite synapse density assessment, please follow this guide:
+To prepare your analysis environment for __bipartite synapse density assessment__, please follow this guide:
 
 * Download the folder __guide_files__ and navigate to the folder using your file explorer.
 * Open ImageJ/FIJI on the desktop
@@ -54,16 +58,16 @@ Preprocess the image using the __ExcitPreprocess__ script by pressing <Ctrl + R>
 The background subtracted, thresholded and binarized result should then look like this:
 
 ![Image excit preprocessing](https://github.com/nes-b/AstSyns/blob/master/images_readme/syncount_excit_wf.PNG) \
-Figure 1. Preprocessing for bipartite synapse analysis.
+__Figure 1__ Preprocessing for bipartite synapse analysis.
 
 Given a previously defined range of sizes that particles should lie within, we now turn to (let) count all puncta and their spatial overlap. 
 According to the developer's advise the size cut-offs to set were chosen by collating different values with the expected immunofluorescent signal by eye. \
-Please see the [developers page](https://github.com/SynPuCo/SynapseCounter) for detailed instructions. \
+Please see the [developers page](https://github.com/SynPuCo/SynapseCounter) for detailed instructions. 
 
 Initiatlize the *SynapseCounter*-Tool and select select the following paramters for excitatory synapses:
 
 ![Image synapse counter settings](https://github.com/nes-b/AstSyns/blob/master/images_readme/syncount_excit_paramsPNG.PNG) \
-Figure 2. Parameter settings for the *SynapseCounter*
+__Figure 2__ Parameter settings for the *SynapseCounter*
 
 Thereby, from the 2-channel image, you retrieve the values of single counts (pre- and postsynaptic) as well as those of the colocalzation.
 To calculate the density, we divide this absolute numbers by the extent of the ROI (50.61 x 50.61) um^2,
@@ -73,7 +77,8 @@ so that, e.g.
 
 
 ## Astrocyte Domain - Synapse Density
-We also investigated presumed depletion of the synaptic island (synapses within the astrocytic spatial domain) of affected cells. 
+We also investigated a presumed depletion of the synaptic island (synapses within the astrocytic spatial domain) of affected cells. 
+In these tauopathies, astrogliopathy with pTau+ inclusions is a common and pathognomonic finding, whereas the 3D-organization of pTau aggregates differs between both disease entities. \
 Therefore, we imaged (212 x 212) um^2 large ROI centering such astrocytes (AT8 / EAAT2 markers) and partitioned the raw synaptic channel (HOMER1) into 17 bins. 
 
 ### Prepare workspace
@@ -101,7 +106,7 @@ You should see the *.tif* image and the *ROI Manager* as depicted below. \
 Note: check the *Labels* and *Show All* in the ROI-Manager window to visualize the preset ROIs. 
 
 ![Image of Roi_extraction](https://github.com/nes-b/AstSyns/blob/master/images_readme/roi_extraction_ap.PNG) \
-Figure 3. Bin placing and extraction.
+__Figure 3__ Bin placing and extraction.
 
 As we can see, 17 bins of (27 x 27) um^2 each represent 5 different distances of concentric circular areas in this image:
 
@@ -118,7 +123,7 @@ This will extract all ROIs shown in yellow and stack them in the order 1-17 (one
 Next, you can easily apply the preset preprocessing and *Analyze Particles...* pipeline by left-clicking on one of the extracted bins/ROIs and run *Interactive Interpreter - AstDomainDistr*.
 
 ![Image of puncta detection](https://github.com/nes-b/AstSyns/blob/master/images_readme/exe_analyzeparticlesmacro_ap.PNG) \
-Figure 4. Synaptic puncta analysis in extracted bin.
+__Figure 4__ Synaptic puncta analysis in extracted bin.
 
 A *Summary* window will pop-up with the values of **Count, Total Area, Average Size, %Area and Mean**, as highlighted on the lower right. \
 For further analyses, only the *Counts* argument will be used. \
@@ -130,13 +135,12 @@ astrocytic domain, we obtain the values of distance circle-specific as well as c
 
 ## Contributing
 
-See also the preprint/manuscript on (server/journal)
-
 Katrin Pratsch, Dr. Sigrun Roeber, Dr. Thomas Arzberger, Prof. Dr. med. Jochen Herms
 
-Center for Neuropathology \
+Center for Neuropathology, \
 German Center for Neurodegenerative Diseases, Translational Research \
-University Hospital Munich
+University Hospital Munich \
+Germany
 
 ## Authors
 
@@ -146,16 +150,14 @@ See also the list of [contributors](https://github.com/nes-b/AstSyns/blob/master
 
 ## Citation
 
-If you use this workflow please cite:
-- https://github.com/nes-b/AstSyns/
-or 
-- preprint doi / journal
+If you use this workflow, please cite:
+- https://github.com/nes-b/AstSyns/ \
 
 ## Ethics statement
 
 The available image resources stem from deceased individuals, who all confirmed the use of their brain tissue for neuroscientific research.
 All data is anonymised, in that noone - except for the contributors themselves - has access to the actual pseudonyme identifiers. \
-This is in agreement with the Ethic Board of the University of Munich.
+This is in agreement with the Ethic Board of the Ludwigs-Maximilians-University, Munich.
 
 ## License
 
