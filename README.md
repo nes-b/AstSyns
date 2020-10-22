@@ -7,6 +7,7 @@ Analysis of synaptic puncta in primary human brain tissue.
 These instructions guide you through the workflow of bipartite synapse analysis and astrocytic domain analysis described in our human brain tissue study: 
 
 **Contribution of the Astrocytic Tau Pathology to Synapse Loss in Progressive Supranuclear Palsy and Corticobasal Degeneration**. 
+published in *Brain Pathology*: https://doi-org.emedien.ub.uni-muenchen.de/10.1111/bpa.12914
 
 See below for notes on how to deploy the scripts on your system.
 
