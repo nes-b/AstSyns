@@ -152,6 +152,7 @@ See also the list of [contributors](https://github.com/nes-b/AstSyns/blob/master
 ## Citation
 
 If you use this workflow, please cite:
+- https://onlinelibrary.wiley.com/doi/10.1111/bpa.12914
 - https://github.com/nes-b/AstSyns/ \
 
 ## Ethics statement
